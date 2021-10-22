@@ -1,14 +1,15 @@
 const { BadRequest, NotFound } = require('http-errors')
-const { joiSchemaForPatch } = require('../../model/schemas/contactModel')
+const { updateContact } = require('../../model/contacts')
+const { joiSchemaForPatch } = require('../../validationSchemas')
 
-const updateStatus = async (req, res, next) => {
+const updateCont = async (req, res, next) => {
   try {
     const { error } = joiSchemaForPatch.validate(req.body)
     if (error) {
       throw new BadRequest(error.message)
     }
     const { id } = req.params
-    const result = updateStatus(id)
+    const result = await updateContact(id, req.body)
     if (!result) {
       throw new NotFound(`Product with id=${id} not found`)
     }
@@ -24,4 +25,4 @@ const updateStatus = async (req, res, next) => {
   }
 }
 
-module.exports = updateStatus
+module.exports = updateCont

@@ -1,6 +1,6 @@
 const { BadRequest } = require('http-errors')
 const { addNewContact } = require('../../model/contacts')
-const { joiSchema } = require('../../model/schemas/contactModel')
+const { joiSchema } = require('../../validationSchemas')
 
 const addContact = async (req, res, next) => {
   try {
