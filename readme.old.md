@@ -1,5 +1,5 @@
 * git add *;
-* git commit -m "created a database";
+* git commit -m "changes were made and the structure of the application";
 * git push origin main;
 
 * npm start — старт сервера в режиме production
