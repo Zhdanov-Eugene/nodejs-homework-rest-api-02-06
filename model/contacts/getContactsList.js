@@ -1,4 +1,4 @@
-const { Contact } = require('../schemas/contactModel')
+const { Contact } = require('../../midlewares/validation/contactsSchemas')
 
 const getContactsList = () => {
   return Contact.find()

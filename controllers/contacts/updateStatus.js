@@ -1,5 +1,5 @@
 const { BadRequest, NotFound } = require('http-errors')
-const { joiSchemaForPatch } = require('../../model/schemas/contactModel')
+const { joiSchemaForPatch } = require('../../midlewares/validation/contactsSchemas')
 
 const updateStatus = async (req, res, next) => {
   try {
