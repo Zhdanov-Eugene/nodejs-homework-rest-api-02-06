@@ -1,18 +1,7 @@
-const getContactsList = require('./getContactsList')
+const { Contact } = require('../../midlewares/validation/contactsSchemas')
 
-const getContactById = async (id) => {
-  try {
-    const contacts = await getContactsList
-    const index = contacts.findIndex(contact => contact.id === Number(id))
-
-    if (index === -1) {
-      return null
-    }
-
-    return contacts[index]
-  } catch (error) {
-    console.log(error.message)
-  }
+const getContactById = (id) => {
+  return Contact.findOne({ _id: id })
 }
 
 module.exports = getContactById

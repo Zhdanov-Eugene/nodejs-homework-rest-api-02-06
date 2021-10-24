@@ -1,4 +1,4 @@
-const { getContactsList } = require('../../model/contacts')
+const { getContactsList } = require('../../midlewares/validation/contactsSchemas')
 
 const getAllContacts = async (_, res, next) => {
   try {

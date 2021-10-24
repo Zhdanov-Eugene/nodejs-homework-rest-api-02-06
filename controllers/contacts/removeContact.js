@@ -1,5 +1,5 @@
 const { NotFound } = require('http-errors')
-const { deleteContact } = require('../../model/contacts')
+const { deleteContact } = require('../../midlewares/validation/contactsSchemas')
 
 const removeContact = async (req, res, next) => {
   try {
