@@ -1,4 +1,4 @@
-const { Contact } = require('../../midlewares/validation/contactsSchemas')
+const { Contact } = require('../../model/schemas/contactsSchemas')
 
 const deleteContact = (id) => {
   return Contact.findByIdAndRemove({ _id: id })
