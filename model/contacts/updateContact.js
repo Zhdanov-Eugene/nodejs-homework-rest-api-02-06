@@ -1,4 +1,4 @@
-const { Contact } = require('../../midlewares/validation/contactsSchemas')
+const { Contact } = require('../../model/schemas/contactsSchemas')
 
 const updateContact = (id, body) => {
   return Contact.findByIdAndUpdate({ _id: id }, body, { new: true })
