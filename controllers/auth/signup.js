@@ -1,6 +1,6 @@
 const { Conflict, BadRequest } = require('http-errors')
 const bcrypt = require('bcrypt')
-const { User, joiSchema } = require('../../model/schemas/userModel')
+const { User, joiSchema } = require('../../model/schemas/userSchemas')
 
 const singup = async (req, res, next) => {
   try {

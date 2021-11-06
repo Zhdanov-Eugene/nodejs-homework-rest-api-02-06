@@ -2,7 +2,7 @@ const { BadRequest, Unauthorized } = require('http-errors')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 
-const { joiSchema, User } = require('../../model/schemas/userModel')
+const { joiSchema, User } = require('../../model/schemas/userSchemas')
 
 const { SECRET_KEY } = process.env
 

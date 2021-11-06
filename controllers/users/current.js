@@ -1,5 +1,5 @@
 const { Unauthorized } = require('http-errors')
-const { User } = require('../../model/schemas/userModel')
+const { User } = require('../../model/schemas/userSchemas')
 
 const current = async (req, res, next) => {
   try {
