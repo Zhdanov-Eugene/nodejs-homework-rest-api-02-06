@@ -5,7 +5,7 @@
 
 // describe('Autenticate Test', () => {
 //   const mockResponse = {}
-//   const mockNext = jest.fn()
+//   const mockNext = test.fn()
 //   test('with authorization header', () => {
 //     const user = {
 //       _id: '5'

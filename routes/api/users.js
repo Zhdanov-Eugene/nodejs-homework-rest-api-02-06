@@ -1,6 +1,6 @@
 const express = require('express')
-const { current, updateAvatar } = require('../../controllers/users')
-const { autenticate, upload } = require('../../midlewares')
+const { current, updateAvatar } = require('../../controllers/users/')
+const { autenticate, upload } = require('../../midlewares/')
 
 const router = express.Router()
 
