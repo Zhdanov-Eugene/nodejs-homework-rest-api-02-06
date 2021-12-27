@@ -1,7 +1,7 @@
 const { Unauthorized } = require('http-errors')
 const { User } = require('../../model/schemas/userSchemas')
 
-const singout = async(req, res, next) => {
+const signout = async(req, res, next) => {
   try {
     const { _id } = req.user
     const result = await User.findByIdAndUpdate(_id, { token: null })
@@ -15,4 +15,4 @@ const singout = async(req, res, next) => {
   }
 }
 
-module.exports = singout
+module.exports = signout
